@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcular Parcelas</title>
+</head>
+<body>
+
+  <h2>Calcular Valor das Parcelas</h2>
+
+  <label>Nome do Cliente:</label>
+  <input type="text" id="nome"><br><br>
+
+  <label>Total da Compra (R$):</label>
+  <input type="number" id="total" step="0.01"><br><br>
+
+  <label>Número de Parcelas:</label>
+  <input type="number" id="parcelas"><br><br>
+
+  <button onclick="calcularParcelas()">Calcular</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function calcularParcelas() {
+      const nome = document.getElementById("nome").value;
+      const total = parseFloat(document.getElementById("total").value);
+      const parcelas = parseInt(document.getElementById("parcelas").value);
+
+      if (!nome || !total || !parcelas) {
+        alert("Preencha todos os campos!");
+        return;
+      }
+
+      const valorParcela = total / parcelas;
+      document.getElementById("resultado").innerText = 
+        nome + ", cada parcela será de R$ " + valorParcela.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>

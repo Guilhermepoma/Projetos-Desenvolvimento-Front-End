@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Moeda</title>
+</head>
+<body>
+
+  <h2>Conversor de Dólar para Real</h2>
+
+  <label>Valor em dólares (US$): </label>
+  <input type="number" id="valorDolar" placeholder="Ex: 10"><br><br>
+
+  <label>Cotação do dólar (R$): </label>
+  <input type="number" id="cotacao" placeholder="Ex: 5.60"><br><br>
+
+  <button onclick="converter()">Converter</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function converter() {
+      var valorDolar = parseFloat(document.getElementById("valorDolar").value);
+      var cotacao = parseFloat(document.getElementById("cotacao").value);
+
+      if (isNaN(valorDolar) || isNaN(cotacao)) {
+        document.getElementById("resultado").innerText = "Por favor, insira valores válidos.";
+        return;
+      }
+
+      var valorReal = valorDolar * cotacao;
+      document.getElementById("resultado").innerText = 
+        "O valor em reais é: R$ " + valorReal.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
