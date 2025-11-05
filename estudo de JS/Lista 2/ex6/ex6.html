@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Cálculo do Peso Ideal</title>
+</head>
+<body>
+    <h1>Exercício 6 - Cálculo do Peso Ideal</h1>
+    <p>Receba altura e sexo e calcule o peso ideal.</p>
+
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01"><br><br>
+
+    <label for="sexo">Sexo (masculino/feminino):</label>
+    <select id="sexo">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+    </select><br><br>
+
+    <button onclick="calcularPesoIdeal()">Calcular Peso Ideal</button>
+
+    <script src="script6.js"></script>
+</body>
+</html>
