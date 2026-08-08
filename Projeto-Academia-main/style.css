@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* ===== Variáveis de cores e fontes ===== */
+:root {
+    --cor-fundo: #020202;
+    --cor-background: #131313;
+    --cor-hover: #98251d;
+    --cor-texto: #e7f1ec;
+    --cor-texto2: #d32f2f;
+    --cor-primaria: #ab2117;
+
+    --fonte-principal: "Nunito", sans-serif;
+    --fonte-titulo: 'Archivo Black', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-background);
+    color: var(--cor-texto);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo);
+}
+
+header img {
+    height: 250px;
+}
+
+.dp-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    background-color: rgb(7, 7, 7);
+}
+
+.dp-menu ul li {
+    position: relative;
+}
+
+.dp-menu ul li a {
+    display: block;
+    padding: 15px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+}
+
+.dp-menu ul li a:hover {
+    background-color: var(--cor-hover);
+}
+
+/* Submenu */
+.dp-menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+    width: 150px;
+    padding: 0;
+}
+
+.dp-menu ul li:hover ul {
+    display: block;
+}
+
+.dp-menu ul ul li a {
+    display: block;
+    text-align: left;
+}
+
+.painel { 
+    background: url('Imgs/home.png') no-repeat center center;
+    background-size: cover;
+    min-height: 650px;
+    padding: 60px 20px;
+    color: var(--cor-texto);
+    text-align: center;
+    border-bottom: 5px solid var(--cor-primaria);
+}
+
+.quem-somos,
+.conteudo-dicas {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: rgb(7, 7, 7);
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid var(--cor-primaria);
+    transition: 0.2s;
+    color: var(--cor-texto);
+}
+
+.quem-somos:hover,
+.conteudo-dicas:hover {
+    box-shadow: 0 8px 20px rgba(171, 33, 23, 0.6);
+}
+
+.quem-somos h2,
+.conteudo-dicas h1 {
+    color: var(--cor-texto2);
+    margin-bottom: 20px;
+    font-family: var(--fonte-titulo);
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+}
+
+.quem-somos p,
+.conteudo-dicas p {
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.quem-somos h2::after,
+.conteudo-dicas h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.modalidades {
+    max-width: 1000px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.modalidades h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    color: var(--cor-texto2);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.modalidades h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.modalidades-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.modalidade {
+    background-color: rgb(7,7,7);
+    border-radius: 12px;
+    padding: 15px;
+    width: 180px;
+    transition: 0.3s;
+    border: 2px solid var(--cor-primaria);
+}
+
+.modalidade:hover {
+    box-shadow: 0 8px 20px rgba(171, 33, 23, 0.6);
+}
+
+.modalidade img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.modalidade p {
+    color: var(--cor-texto);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* ===== PLANOS ===== */
+.planos {
+    text-align: center;
+    margin: 60px auto;
+}
+
+.planos h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    color: var(--cor-texto2);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.planos h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 60px auto;
+    flex-wrap: wrap;
+}
+
+.plano {
+    background-color: rgb(7,7,7);
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid var(--cor-primaria);
+    transition: 0.3s;
+}
+
+.plano:hover {
+    box-shadow: 0 8px 20px rgba(171, 33, 23, 0.6);
+}
+
+.plano h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+}
+
+.mes {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+}
+
+.plano ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.plano ul li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+    color: var(--cor-texto);
+}
+
+.plano ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--cor-primaria);
+}
+
+.plano ul li.desativado::before {
+    content: "✖";
+    color: var(--cor-texto2);
+}
+
+.plano button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.plano button:hover {
+    background-color: var(--cor-hover);
+}
+
+/* Diferenciação de cores dos planos */
+.plano-intermediario h3 {
+    color: #f2b300;
+}
+
+.plano-premium h3 {
+    color: #f25c4c;
+}
+
+/* ===== DICAS DE SAÚDE ===== */
+.dica-categoria {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.dica-categoria h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    color: var(--cor-texto2);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.dica-categoria h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.dica {
+    background-color: rgb(7, 7, 7);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid var(--cor-primaria);
+    transition: 0.3s;
+    color: var(--cor-texto);
+}
+
+.dica:hover {
+    box-shadow: 0 8px 20px rgba(171, 33, 23, 0.6);
+}
+
+.dica h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.dica p {
+    line-height: 1.6;
+}
+
+/* ===== FORMULÁRIO DE MATRÍCULA ===== */
+.formulario-matricula {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.formulario-matricula h1 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto2);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.formulario-matricula p {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.formulario-matricula fieldset {
+    border: 1px solid rgba(171, 33, 23, 0.4);
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.formulario-matricula legend {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 1.1rem;
+    padding: 0 6px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--cor-primaria);
+    outline: none;
+    box-shadow: 0 0 5px rgba(171, 33, 23, 0.3);
+}
+
+.formulario-matricula button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.formulario-matricula button[type="submit"]:hover {
+    background-color: var(--cor-hover);
+    transform: scale(1.02);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--cor-fundo);
+    text-align: center;
+    padding: 20px 0;
+    color: var(--cor-texto);
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 20px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .modalidades-container,
+    .planos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dp-menu ul {
+        flex-direction: column;
+    }
+    
+    header img {
+        height: 180px;
+    }
+    
+    .quem-somos,
+    .conteudo-dicas {
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
+/* ===== ESTILOS PARA LINKS DAS MODALIDADES ===== */
+.modalidade a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+}
+
+.modalidade a:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== MELHORIAS DE ACESSIBILIDADE ===== */
+.modalidade:focus-within {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+/* ===== AJUSTES PARA BOTÕES ===== */
+button, .plano button {
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+}
+
+button:focus, .plano button:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+/* ===== MELHORIAS NO LOGO ===== */
+#logo {
+    transition: transform 0.2s;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}

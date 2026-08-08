@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula | Iron House</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imgs/icon.png">
+</head>
+<body>
+    <header>
+        <img id="logo" src="Imgs/logo.png" alt="Logotipo da Iron House">
+    </header>
+    
+    <!-- Parte NAV -->
+    <nav class="dp-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="modalidades.html">Modalidades</a>
+                <ul>
+                    <li><a href="musculacao.html">Musculação</a></li>
+                    <li><a href="power.html">Power Lifting</a></li>
+                    <li><a href="jiu.html">Jiu-Jitsu</a></li>
+                    <li><a href="zumba.html">Zumba</a></li>
+                </ul>
+            </li>
+            <li><a href="dicas.html">Dicas de Saúde</a></li>
+            <li><a href="matricula.html">Matrícula</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="container-matricula">
+            <form class="formulario-matricula">
+                <h1>Faça sua Matrícula</h1>
+                <p>Preencha o formulário abaixo para iniciar seu treino na Iron House.</p>
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_nascimento">Data de Nascimento:</label>
+                        <input type="date" id="data_nascimento" name="data_nascimento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <div class="form-group">
+                        <label for="endereco">Endereço Completo:</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Plano e Modalidade</legend>
+                    <div class="form-group">
+                        <label for="plano">Escolha seu Plano:</label>
+                        <select id="plano" name="plano" required>
+                            <option value="">Selecione um plano</option>
+                            <option value="basico">Plano Básico</option>
+                            <option value="intermediario">Plano Intermediário</option>
+                            <option value="premium">Plano Premium</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalidade">Modalidade Preferida:</label>
+                        <select id="modalidade" name="modalidade" required>
+                            <option value="">Selecione uma modalidade</option>
+                            <option value="musculacao">Musculação</option>
+                            <option value="powerlifting">Power Lifting</option>
+                            <option value="jiujitsu">Jiu-Jitsu</option>
+                            <option value="zumba">Zumba</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar Matrícula</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Iron House. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
